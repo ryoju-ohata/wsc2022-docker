@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  app:
+    container_name: app
+    ports:
+      - "2022:22"
+      - "80:80"
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+      - "8004:8004"
+      - "8005:8005"
+      - "8006:8006"
+      - "8007:8007"
+      - "8008:8008"
+      - "8009:8009"
+      - "8010:8010"
+      - "8011:8011"
+      - "8012:8012"
+      - "8013:8013"
+      - "8014:8014"
+      - "8015:8015"
+    build: ./docker/app
+    volumes:
+      - ./src:/var/www/html
+  db:
+    container_name: db
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      # MYSQL_USER: user
+      # MYSQL_PASSWORD: pass
+      # TZ: Asia/Tokyo
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/script:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    # environment:
+      # - PMA_ARBITRARY=1
+      # - PMA_HOST=db
+      # - PMA_USER=root
+      # - PMA_PASSWORD=root
+    links:
+      - db
+    ports:
+      - 8080:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
