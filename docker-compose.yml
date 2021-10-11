@@ -27,7 +27,7 @@ services:
     container_name: db
     image: mariadb:10.5
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 55vEmxAvbuGp
       # MYSQL_USER: user
       # MYSQL_PASSWORD: pass
       # TZ: Asia/Tokyo
@@ -35,7 +35,7 @@ services:
       - ./docker/db/data:/var/lib/mysql
       - ./docker/db/script:/docker-entrypoint-initdb.d
     ports:
-      - 3306:3306
+      - 33306:3306
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin

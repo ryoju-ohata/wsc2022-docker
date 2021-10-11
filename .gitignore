@@ -1,2 +1,5 @@
 docker/db/data
 phpmyadmin/sessions/
+
+src/*
+!src/80/public/index.php
