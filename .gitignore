@@ -1,5 +1,10 @@
-docker/db/data
-phpmyadmin/sessions/
+.DS_Store
 
-src/*
-!src/80/public/index.php
+/docker/db/data
+/phpmyadmin/sessions/
+
+/src/*
+
+!/src/80
+/src/80/public/*
+!/src/80/public/index.php
