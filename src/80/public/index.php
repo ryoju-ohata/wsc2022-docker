@@ -24,9 +24,11 @@
     // SSH
     $ ssh -p 2022 -i ./ssh_key/wsc2022 root@<?php echo $host ?>
 
+
     // Laravel Project
     $ cd /var/www/html/8001
     $ composer create-project "laravel/laravel=~8.0" --prefer-dist laravelapp
+    $ php artisan migrate
 
     // Composer Install
     $ cd /var/www/html/8001
