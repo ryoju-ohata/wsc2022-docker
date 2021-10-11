@@ -22,7 +22,7 @@
   <?php endfor; ?>
   <div style="white-space: pre-line">
     // SSH
-    $ ssh -i ./ssh_key/wsc2022 root@<?php echo $host ?>
+    $ ssh -p 2022 -i ./ssh_key/wsc2022 root@<?php echo $host ?>
 
     // Laravel Project
     $ cd /var/www/html/8001
