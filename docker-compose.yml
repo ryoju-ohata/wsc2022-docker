@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3"
 services:
   app:
     container_name: app
@@ -40,10 +40,10 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     # environment:
-      # - PMA_ARBITRARY=1
-      # - PMA_HOST=db
-      # - PMA_USER=root
-      # - PMA_PASSWORD=root
+    # - PMA_ARBITRARY=1
+    # - PMA_HOST=db
+    # - PMA_USER=root
+    # - PMA_PASSWORD=root
     links:
       - db
     ports:
