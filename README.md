@@ -11,6 +11,6 @@ docker exec -it app /usr/sbin/sshd
 
 ```bash
 for i in {8002..8015}; do
-  mkdir src/$i && mkdir src/$i/public && echo $i > src/$i/public/index.html
+  mkdir $i && mkdir $i/public && echo $i > $i/public/index.html
 done
 ```

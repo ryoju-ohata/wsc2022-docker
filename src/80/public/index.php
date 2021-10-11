@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>WSC2022</title>
 </head>
 <body>
   <?php $host = $_SERVER["HTTP_HOST"] ?>
@@ -28,7 +28,9 @@
     // Laravel Project
     $ cd /var/www/html/8001
     $ composer create-project "laravel/laravel=~8.0" --prefer-dist laravelapp
-    $ php artisan migrate
+    $ shopt -s dotglob && mv ./laravelapp/* ./
+    $ chmod -R 777 ./storage
+    $ php artisan migrate # .envのDB設定を変更しておく
 
     // Composer Install
     $ cd /var/www/html/8001
